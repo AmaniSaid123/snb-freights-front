@@ -1,7 +1,7 @@
 <script setup>
 import { FilterMatchMode } from 'primevue/api';
 import { ref, onMounted, onBeforeMount } from 'vue';
-import StatusService from '@/service/StatusService';
+import StatutesService from '@/service/StatutesService';
 import { useToast } from 'primevue/usetoast';
 import { useLayout } from '@/layout/composables/layout';
 
@@ -10,7 +10,7 @@ const { contextPath } = useLayout();
 
 const status = ref(null);
 const statutesDialog = ref(false);
-const deleteStatutesDDialog = ref(false);
+const deleteStatutesDialog = ref(false);
 const deleteStatusDialog = ref(false);
 const statutes = ref({});
 const selectedStatus = ref(null);
@@ -18,13 +18,13 @@ const dt = ref(null);
 const filters = ref({});
 const submitted = ref(false);
 
-const statusService = new StatusService();
+const statutesService = new StatutesService();
 
 onBeforeMount(() => {
     initFilters();
 });
 onMounted(() => {
-    statusService.getStatus().then((data) => (status.value = data));
+    statutesService.getStatus().then((data) => (status.value = data));
 });
 
 
@@ -66,12 +66,12 @@ const editStatutes = (editStatutes) => {
 
 const confirmDeleteStatus = (editStatutes) => {
     statutes.value = editStatutes;
-    deleteStatutesDDialog.value = true;
+    deleteStatutesDialog.value = true;
 };
 
 const deleteStatutes = () => {
     status.value = status.value.filter((val) => val.id !== statutes.value.id);
-    deleteStatutesDDialog.value = false;
+    deleteStatutesDialog.value = false;
     statutes.value = {};
     toast.add({ severity: 'success', summary: 'Successful', detail: 'Statutes Deleted', life: 3000 });
 };
@@ -213,7 +213,7 @@ const initFilters = () => {
                     </template>
                 </Dialog>
 
-                <Dialog v-model:visible="deleteStatutesDDialog" :style="{ width: '450px' }" header="Confirm" :modal="true">
+                <Dialog v-model:visible="deleteStatutesDialog" :style="{ width: '450px' }" header="Confirm" :modal="true">
                     <div class="flex align-items-center justify-content-center">
                         <i class="pi pi-exclamation-triangle mr-3" style="font-size: 2rem" />
                         <span v-if="statutes"
@@ -222,7 +222,7 @@ const initFilters = () => {
                         >
                     </div>
                     <template #footer>
-                        <Button label="No" icon="pi pi-times" class="p-button-text" @click="deleteStatutesDDialog = false" />
+                        <Button label="No" icon="pi pi-times" class="p-button-text" @click="deleteStatutesDialog = false" />
                         <Button label="Yes" icon="pi pi-check" class="p-button-text" @click="deleteStatutes" />
                     </template>
                 </Dialog>
