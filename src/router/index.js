@@ -137,6 +137,11 @@ const router = createRouter({
                     component: () => import('@/views/pages/Crud.vue')
                 },
                 {
+                    path: '/status',
+                    name: 'status',
+                    component: () => import('@/views/pages/Status.vue')
+                },
+                {
                     path: '/documentation',
                     name: 'documentation',
                     component: () => import('@/views/utilities/Documentation.vue')
