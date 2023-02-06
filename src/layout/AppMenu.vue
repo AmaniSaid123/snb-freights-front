@@ -86,7 +86,7 @@ const model = ref([
             },
             {
                 label: 'Countries',
-                icon: 'pi pi-fw pi-check-square',
+                icon: 'pi pi-fw pi-flag',
                 to: '/countries'
             },
             {
