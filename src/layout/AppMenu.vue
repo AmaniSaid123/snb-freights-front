@@ -85,6 +85,11 @@ const model = ref([
                 to: '/status'
             },
             {
+                label: 'Countries',
+                icon: 'pi pi-fw pi-flag',
+                to: '/countries'
+            },
+            {
                 label: 'Timeline',
                 icon: 'pi pi-fw pi-calendar',
                 to: '/pages/timeline'
