@@ -89,6 +89,16 @@ const model = ref([
                 icon: 'pi pi-fw pi-flag',
                 to: '/countries'
             },
+           /* {
+                label: 'Packages',
+                icon: 'pi pi-fw pi-clone',
+                to: '/packages'
+            },*/
+            {
+                label: 'Clients',
+                icon: 'pi pi-fw pi-user',
+                to: '/clients'
+            },
             {
                 label: 'Timeline',
                 icon: 'pi pi-fw pi-calendar',
