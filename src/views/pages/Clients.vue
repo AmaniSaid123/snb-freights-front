@@ -4,11 +4,8 @@ import { ref, onMounted, onBeforeMount } from 'vue';
 import ClientService from '@/service/ClientService';
 
 import { useToast } from 'primevue/usetoast';
-import { useLayout } from '@/layout/composables/layout';
 
 const toast = useToast();
-const { contextPath } = useLayout();
-
 const clients = ref(null);
 const clientDialog = ref(false);
 const deleteClientDialog = ref(false);
@@ -18,11 +15,6 @@ const selectedClients = ref(null);
 const dt = ref(null);
 const filters = ref({});
 const submitted = ref(false);
-const statuses = ref([
-    { label: 'INSTOCK', value: 'instock' },
-    { label: 'LOWSTOCK', value: 'lowstock' },
-    { label: 'OUTOFSTOCK', value: 'outofstock' }
-]);
 
 const clientService = new ClientService();
 
