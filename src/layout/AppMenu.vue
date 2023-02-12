@@ -6,18 +6,13 @@ import AppMenuItem from './AppMenuItem.vue';
 const model = ref([
     {
         label: 'Home',
-        items: [{ label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/' }]
+        items: [{ label: 'Dashboard', icon: 'pi pi-fw pi-home', to: '/dashboard' }]
     },
     {
         label: 'Pages',
         icon: 'pi pi-fw pi-briefcase',
         to: '/pages',
         items: [
-            {
-                label: 'Crud',
-                icon: 'pi pi-fw pi-pencil',
-                to: '/pages/crud'
-            },
             {
                 label: 'Statutes',
                 icon: 'pi pi-fw pi-check-square',
@@ -41,17 +36,17 @@ const model = ref([
             {
                 label: 'Not Found',
                 icon: 'pi pi-fw pi-exclamation-circle',
-                to: '/pages/notfound'
+                to: '/notfound'
             },
             {
                 label: 'Error',
                 icon: 'pi pi-fw pi-times-circle',
-                to: '/pages/error'
+                to: '/error'
             },
             {
                 label: 'Access Denied',
                 icon: 'pi pi-fw pi-lock',
-                to: '/pages/access'
+                to: '/access'
             }
         ]
     }

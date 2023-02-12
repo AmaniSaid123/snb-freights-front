@@ -14,11 +14,6 @@ const router = createRouter({
                     component: () => import('@/views/Dashboard.vue')
                 },
                 {
-                    path: '/pages/crud',
-                    name: 'crud',
-                    component: () => import('@/views/pages/Crud.vue')
-                },
-                {
                     path: '/statutes',
                     name: 'statutes',
                     component: () => import('@/views/pages/Status.vue')
@@ -40,27 +35,29 @@ const router = createRouter({
                 }
             ]
         },
-        {
-            path: '/pages/notfound',
-            name: 'notfound',
-            component: () => import('@/views/pages/NotFound.vue')
-        },
-
+        
         {
             path: '/',
             name: 'login',
             component: () => import('@/views/pages/auth/Login.vue')
         },
+
         {
-            path: '/pages/access',
+            path: '/notfound',
+            name: 'notfound',
+            component: () => import('@/views/pages/NotFound.vue')
+        },
+        {
+            path: '/access',
             name: 'accessDenied',
             component: () => import('@/views/pages/Access.vue')
         },
         {
-            path: '/pages/error',
+            path: '/error',
             name: 'error',
             component: () => import('@/views/pages/Error.vue')
         }
+        
     ]
 });
 
