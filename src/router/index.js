@@ -13,17 +13,6 @@ const router = createRouter({
                     name: 'dashboard',
                     component: () => import('@/views/Dashboard.vue')
                 },
-            
-                {
-                    path: '/pages/timeline',
-                    name: 'timeline',
-                    component: () => import('@/views/pages/Timeline.vue')
-                },
-                {
-                    path: '/pages/empty',
-                    name: 'empty',
-                    component: () => import('@/views/pages/Empty.vue')
-                },
                 {
                     path: '/pages/crud',
                     name: 'crud',
@@ -48,18 +37,8 @@ const router = createRouter({
                     path: '/packages',
                     name: 'packages',
                     component: () => import('@/views/pages/Packages.vue')
-                },
-                {
-                    path: '/documentation',
-                    name: 'documentation',
-                    component: () => import('@/views/utilities/Documentation.vue')
                 }
             ]
-        },
-        {
-            path: '/landing',
-            name: 'landing',
-            component: () => import('@/views/pages/Landing.vue')
         },
         {
             path: '/pages/notfound',
@@ -73,14 +52,14 @@ const router = createRouter({
             component: () => import('@/views/pages/auth/Login.vue')
         },
         {
-            path: '/auth/access',
+            path: '/pages/access',
             name: 'accessDenied',
-            component: () => import('@/views/pages/auth/Access.vue')
+            component: () => import('@/views/pages/Access.vue')
         },
         {
-            path: '/auth/error',
+            path: '/pages/error',
             name: 'error',
-            component: () => import('@/views/pages/auth/Error.vue')
+            component: () => import('@/views/pages/Error.vue')
         }
     ]
 });
