@@ -2,13 +2,13 @@
     "data":[
        {
           "id" : 1,
-          "name":"Congo",
-          "postName":"CG",
-          "firstName": "2021-01-12",
-          "email": "2021-01-12",
-          "phone": "2021-01-12",
-          "homeAddress": "2021-01-12",
-          "additionalAddressDetails": "BBB",
+          "name":"amani",
+          "postName":"amani said",
+          "firstName": "said",
+          "email": "amani@gmail.com",
+          "phone": "+21696584789",
+          "homeAddress": "Sousse",
+          "additionalAddressDetails": "Roint point panorama",
           "createdAt": "2021-01-12"
        },
        {

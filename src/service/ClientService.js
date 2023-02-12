@@ -1,5 +1,5 @@
 const contextPath = import.meta.env.BASE_URL;
-export default class CountryService {
+export default class ClientService {
     getClients() {
         return fetch(contextPath + 'demo/data/clients.json')
             .then((res) => res.json())
