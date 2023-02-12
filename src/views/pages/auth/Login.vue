@@ -17,11 +17,10 @@ const logoUrl = computed(() => {
     <div class="surface-ground flex align-items-center justify-content-center min-h-screen min-w-screen overflow-hidden">
         <div class="flex flex-column align-items-center justify-content-center">
             <img :src="logoUrl" alt="Sakai logo" class="mb-5 w-6rem flex-shrink-0" />
-            <div style="border-radius: 56px; padding: 0.3rem; background: linear-gradient(180deg, var(--primary-color) 10%, rgba(33, 150, 243, 0) 30%)">
+            <div style="border-radius: 56px; padding: 0.3rem; background: linear-gradient(180deg,  #999dab 10%, rgba(33, 150, 243, 0) 30%)">
                 <div class="w-full surface-card py-8 px-5 sm:px-8" style="border-radius: 53px">
                     <div class="text-center mb-5">
-                        <img src="/demo/images/login/avatar.png" alt="Image" height="50" class="mb-3" />
-                        <div class="text-900 text-3xl font-medium mb-3">Welcome, Isabel!</div>
+                        <div class="text-900 text-3xl font-medium mb-3">Welcome, SnB Freight!</div>
                         <span class="text-600 font-medium">Sign in to continue</span>
                     </div>
 
@@ -39,7 +38,8 @@ const logoUrl = computed(() => {
                             </div>
                             <a class="font-medium no-underline ml-2 text-right cursor-pointer" style="color: var(--primary-color)">Forgot password?</a>
                         </div>
-                        <Button label="Sign In" class="w-full p-3 text-xl"></Button>
+                        
+                        <Button label="Sign In"  @click="$router.push('/dashboard')" class="w-full p-3 text-xl login-button"></Button>
                     </div>
                 </div>
             </div>
@@ -58,4 +58,19 @@ const logoUrl = computed(() => {
     transform: scale(1.6);
     margin-right: 1rem;
 }
+.login-button {
+    color: #ffffff;
+    background: #999dab !important;
+    border: 1px solid #999dab !important;
+    padding: 0.75rem 1.25rem;
+    font-size: 1rem;
+    transition: background-color 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+    border-radius: 6px;
+  }
+  .p-button:enabled:hover {
+    background: #4F46E5;
+    color: #ffffff;
+    border-color: #4F46E5;
+}
+  
 </style>
