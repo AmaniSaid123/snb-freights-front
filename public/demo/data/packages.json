@@ -1,0 +1,45 @@
+{
+    "data":[
+        {
+            "id" : 1,
+            "code": "f230fh0g3",
+            "estimatedWeight": "50",
+            "typePackage": "type1",
+            "description": "Description for Image 1",
+            "estimatedValuePackage": "Title 1",
+            "inventoryStatus": "INSTOCK",
+            "clients": [
+                {
+                    "id" : 1,
+                    "name":"amani",
+                    "postName":"amani said",
+                    "firstName": "said",
+                    "email": "amani@gmail.com",
+                    "phone": "+21696584789",
+                    "homeAddress": "Sousse",
+                    "additionalAddressDetails": "Roint point panorama",
+                    "createdAt": "2021-01-12"
+                }
+            ]
+        },
+        {
+            "id" : 2,
+            "code": "bfgifgo",
+            "estimatedWeight": "demo/images/galleria/galleria2.jpg",
+            "typePackage": "demo/images/galleria/galleria2s.jpg",
+            "description": "Description for Image 2",
+            "estimatedValuePackage": "Title 2",
+            "inventoryStatus": "LOWSTOCK"
+        },
+        {
+            "id" : 3,
+            "code": "affhrivl",
+            "estimatedWeight": "demo/images/galleria/galleria3.jpg",
+            "typePackage": "demo/images/galleria/galleria3s.jpg",
+            "description": "Description for Image 3",
+            "estimatedValuePackage": "Title 3",
+            "inventoryStatus": "OUTOFSTOCK"
+        }
+ 
+    ]
+}
