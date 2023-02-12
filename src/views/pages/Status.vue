@@ -1,7 +1,7 @@
 <script setup>
 import { FilterMatchMode } from 'primevue/api';
 import { ref, onMounted, onBeforeMount } from 'vue';
-import StatutesService from '@/service/StatutesService';
+import StatutService from '@/service/StatutService';
 import { useToast } from 'primevue/usetoast';
 import { useLayout } from '@/layout/composables/layout';
 
@@ -18,13 +18,13 @@ const dt = ref(null);
 const filters = ref({});
 const submitted = ref(false);
 
-const statutesService = new StatutesService();
+const statutService = new StatutService();
 
 onBeforeMount(() => {
     initFilters();
 });
 onMounted(() => {
-    statutesService.getStatus().then((data) => (status.value = data));
+    statutService.getStatutes().then((data) => (status.value = data));
 });
 
 
@@ -49,7 +49,7 @@ const saveStatutes = () => {
             statutes.value.id = createId();
             statutes.value.code = statutes.value.code ? statutes.value.code : '';
             statutes.value.label = statutes.value.label ? statutes.value.label : '';
-            statutes.value.created_at = new Date().toISOString().slice(0, 10)
+            statutes.value.createdAt = new Date().toISOString().slice(0, 10)
             status.value.push(statutes.value);
             toast.add({ severity: 'success', summary: 'Successful', detail: 'Statutes Created', life: 3000 });
         }
@@ -145,7 +145,7 @@ const initFilters = () => {
                 >
                     <template #header>
                         <div class="flex flex-column md:flex-row md:justify-content-between md:align-items-center">
-                            <h5 class="m-0">Manage Status</h5>
+                            <h5 class="m-0">Manage Statutes</h5>
                             <span class="block mt-2 md:mt-0 p-input-icon-left">
                                 <i class="pi pi-search" />
                                 <InputText v-model="filters['global'].value" placeholder="Search..." />
@@ -177,10 +177,10 @@ const initFilters = () => {
                         </template>
                     </Column>
 
-                     <Column field="created_at" header="Created At" :sortable="true" headerStyle="width:14%; min-width:10rem;">
+                     <Column field="createdAt" header="Created At" :sortable="true" headerStyle="width:14%; min-width:10rem;">
                         <template #body="slotProps">
                             <span class="p-column-title">Created At</span>
-                            {{ slotProps.data.created_at }}
+                            {{ slotProps.data.createdAt }}
                         </template>
                     </Column> 
 

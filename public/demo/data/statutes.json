@@ -1,0 +1,82 @@
+{
+    "data": [
+    	{
+            "id": 1,
+    		"label": "Waiting to receive your package",
+    		"code": "WAITING_RECEIVE_PACKAGE",
+			"createdAt": "2023-01-12"
+    	},
+    	{
+            "id": 2,
+    		"label": "Shipping scheduled",
+    		"code": "SHIPPING_SCHEDULED",
+    		"createdAt": "2021-01-12"
+    	},
+    	{
+    		"id": 3,
+    		"label": "Parcel shipped",
+    		"code": "PARCEL_SHIPPED",
+			"createdAt": "2021-01-12"
+    	},
+    	{
+    		"id": 4,
+    		"label": "Parcel arrived in destination city",
+    		"code": "PARCEL_ARRIVED_DESTINATION_CITY",
+			"createdAt": "2021-01-12"
+    	},
+    	{
+            "id": 5,
+    		"label": "Parcel arrived in warehouse",
+    		"code": "PARCEL_ARRIVED_WAREHOUSE",
+    		"createdAt": "2021-01-15"
+    	},
+    	{
+            "id": 6,
+    		"label": "Parcel awaiting its collection",
+    		"code": "PARCEL_AWAITING_COLLECTION",
+    		"createdAt": "2021-01-15"
+    	},
+    	{
+            "id": 7,
+    		"label": "Parcel with the delivery company",
+    		"code": "PARCEL_DELIVERY_COMPANY",
+			"createdAt": "2021-01-12"
+    	},
+    	{
+            "id": 8,
+    		"label": "Parcel delivered - Order completed",
+    		"code": "PARCEL_DELIVERED_ORDER_COMPLETED",
+			"createdAt": "2021-01-12"
+    	},
+    	{
+            "id": 9,
+    		"label": "Order canceled",
+    		"code": "ORDER_CANCELED",
+			"createdAt": "2021-01-12"
+    	},
+    	{
+            "id": 10,
+    		"label": "Order suspended",
+    		"code": "ORDER_SUSPENDED",
+			"createdAt": "2021-01-12"
+    	},
+    	{
+            "id": 11,
+    		"label": "Delivery delayed ",
+    		"code": "DELIVERY_DELAYED",
+			"createdAt": "2021-01-12"
+    	},
+    	{
+            "id": 12,
+    		"label": "Parcels with the customs services",
+    		"code": "PARCELS_CUSTOMS_SERVICES",
+			"createdAt": "2021-01-12"
+    	},
+		{
+            "id": 13,
+    		"label": "Waiting for payment of customs fees and taxes",
+    		"code": "WAITING_PAYMENT_CUSTOMS_FEES_TAXES",
+			"createdAt": "2021-01-12"
+    	}
+    ]
+}
