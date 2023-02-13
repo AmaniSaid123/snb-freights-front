@@ -82,7 +82,73 @@ const collapseAll = () => {
                     </Column>
                     <template #expansion="slotProps">
                         <div class="p-3">
-                            <h5>Clients for {{ slotProps.data.code }} </h5>
+                            <h5>Shippers for {{ slotProps.data.code }} </h5>
+                            <DataTable :value="slotProps.data.clients" responsiveLayout="scroll">
+                                <Column field="id" header="Id" :sortable="true">
+                                    <template #body="slotProps">
+                                        {{ slotProps.data.id }}
+                                    </template>
+                                </Column>
+
+                                <Column field="name" header="Name" :sortable="true">
+                                    <template #body="slotProps">
+                                        {{ slotProps.data.name }}
+                                    </template>
+                                </Column>
+
+                                <Column field="postName" header="Post Name" :sortable="true">
+                                    <template #body="slotProps">
+                                        {{ slotProps.data.postName }}
+                                    </template>
+                                </Column>
+
+                                <Column field="firstName" header="First Name" :sortable="true">
+                                    <template #body="slotProps">
+                                        {{ (slotProps.data.firstName) }}
+                                    </template>
+                                </Column>
+
+                                <Column field="email" header="Email" :sortable="true">
+                                    <template #body="slotProps">
+                                        {{ (slotProps.data.email) }}
+                                    </template>
+                                </Column>
+
+
+                                <Column field="phone" header="Phone" :sortable="true">
+                                    <template #body="slotProps">
+                                        {{ (slotProps.data.phone) }}
+                                    </template>
+                                </Column>
+
+
+                                <Column field="homeAddress" header="Home Address" :sortable="true">
+                                    <template #body="slotProps">
+                                        {{ (slotProps.data.homeAddress) }}
+                                    </template>
+                                </Column>
+
+                                <Column field="additionalAddressDetailsfirstName" header="Additional Address Details" :sortable="true">
+                                    <template #body="slotProps">
+                                        {{ (slotProps.data.additionalAddressDetails) }}
+                                    </template>
+                                </Column>
+
+                                <Column field="createdAt" header="Created At" :sortable="true">
+                                    <template #body="slotProps">
+                                        {{ (slotProps.data.createdAt) }}
+                                    </template>
+                                </Column>
+                                
+                                <Column headerStyle="width:4rem">
+                                    <template #body>
+                                        <Button icon="pi pi-search" />
+                                    </template>
+                                </Column>
+                            </DataTable>
+                        </div>
+                        <div class="p-3">
+                            <h5>Destinations for {{ slotProps.data.code }} </h5>
                             <DataTable :value="slotProps.data.clients" responsiveLayout="scroll">
                                 <Column field="id" header="Id" :sortable="true">
                                     <template #body="slotProps">
@@ -148,6 +214,7 @@ const collapseAll = () => {
                             </DataTable>
                         </div>
                     </template>
+                    
                 </DataTable>
             </div>
         </div>

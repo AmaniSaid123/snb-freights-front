@@ -1,0 +1,31 @@
+{
+    "data":[
+       {
+          "id" : 1,
+          "name":"amani",
+          "postName":"amani said",
+          "firstName": "said",
+          "email": "amani@gmail.com",
+          "phone": "+21696584789",
+          "address": "Sousse",
+          "postalcode": "21450",
+          "city": "Sahloul",
+          "additionalAddressDetails": "Roint point panorama",
+          "createdAt": "2021-01-12"
+       },
+       {
+         "id" : 2,
+         "name":"Congo",
+         "postName":"CG",
+         "firstName": "2021-01-12",
+         "email": "2021-01-12",
+         "phone": "2021-01-12",
+         "address": "Sousse",
+         "postalcode": "21450",
+         "city": "Sahloul",
+         "additionalAddressDetails": "HH",
+         "createdAt": "2021-01-12"
+       }
+    ]
+ }
+
