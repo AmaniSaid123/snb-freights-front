@@ -2,7 +2,7 @@
     "data":[
         {
             "id" : 1,
-            "code": "f230fh0g3",
+            "code": "PKG-123456",
             "estimatedWeight": "50",
             "typePackage": "type1",
             "description": "Description for Image 1",
