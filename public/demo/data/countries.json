@@ -3,13 +3,13 @@
        {
           "id" : 1,
           "name":"Congo",
-          "code":"CG",
+          "code":"cg",
           "created_at": "2021-01-12"
        },
        {
           "id" : 2,
           "name":"Congo, The Democratic Republic of the",
-          "code":"CD",
+          "code":"cd",
           "created_at": "2021-01-12"
        }
     ]
