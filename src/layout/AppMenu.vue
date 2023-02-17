@@ -30,7 +30,7 @@ const model = ref([
             },
             {
                 label: 'Clients',
-                icon: 'pi pi-fw pi-user',
+                icon: 'pi pi-fw pi-users',
                 to: '/clients'
             },
             {
@@ -40,7 +40,7 @@ const model = ref([
             },
             {
                 label: 'Companies',
-                icon: 'pi pi-fw pi-user',
+                icon: 'pi pi-fw pi-building',
                 to: '/companies'
             },
             {
