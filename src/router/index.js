@@ -32,6 +32,16 @@ const router = createRouter({
                     path: '/packages',
                     name: 'packages',
                     component: () => import('@/views/pages/Packages.vue')
+                },
+                {
+                    path: '/physicalPersons',
+                    name: 'physicalPersons',
+                    component: () => import('@/views/pages/PhysicalPersons.vue')
+                },
+                {
+                    path: '/companies',
+                    name: 'companies',
+                    component: () => import('@/views/pages/Companies.vue')
                 }
             ]
         },

@@ -1,0 +1,29 @@
+{
+    "data":[
+       {
+          "id" : 1,
+          "name":"sociéte x",
+          "email": "societex@gmail.com",
+          "phone": "+21696584789",
+          "address": "Sousse",
+          "postalcode": "21450",
+          "city": "Sahloul",
+          "additionalAddressDetails": "Roint point panorama",
+          "createdAt": "2021-01-12"
+       },
+       {
+         "id" : 2,
+         "name":"sociéte y",
+         "email": "societey@gmail.com",
+         "phone": "+21696584789",
+         "address": "Gafsa",
+         "postalcode": "2150",
+         "city": "Sud",
+         "additionalAddressDetails": "Roint point panorama",
+         "createdAt": "2021-01-12"
+       }
+    ]
+ }
+
+ 
+

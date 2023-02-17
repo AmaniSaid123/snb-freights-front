@@ -34,6 +34,16 @@ const model = ref([
                 to: '/clients'
             },
             {
+                label: 'Physical Persons',
+                icon: 'pi pi-fw pi-user',
+                to: '/physicalPersons'
+            },
+            {
+                label: 'Companies',
+                icon: 'pi pi-fw pi-user',
+                to: '/companies'
+            },
+            {
                 label: 'Not Found',
                 icon: 'pi pi-fw pi-exclamation-circle',
                 to: '/notfound'

@@ -3,6 +3,7 @@ import { FilterMatchMode } from 'primevue/api';
 import { ref, onMounted, onBeforeMount } from 'vue';
 import PhysicalPersonService from '@/service/PhysicalPersonService';
 
+
 import { useToast } from 'primevue/usetoast';
 
 const toast = useToast();
@@ -51,7 +52,6 @@ const savePhysicalPerson = () => {
             physicalPerson.value.firstName = physicalPerson.value.firstName ? physicalPerson.value.firstName : '';
             physicalPerson.value.email = physicalPerson.value.email ? physicalPerson.value.email : '';
             physicalPerson.value.phone = physicalPerson.value.phone ? physicalPerson.value.phone : '';
-            physicalPerson.value.homeAddress = physicalPerson.value.homeAddress ? physicalPerson.value.homeAddress : '';
             physicalPerson.value.additionalAddressDetails = physicalPerson.value.additionalAddressDetails ? physicalPerson.value.additionalAddressDetails : '';
             physicalPerson.value.createdAt = new Date().toISOString().slice(0, 10)
             physicalPersons.value.push(physicalPerson.value);
@@ -156,6 +156,9 @@ const initFilters = () => {
 
                     <Column selectionMode="multiple" headerStyle="width: 3rem"></Column>
 
+
+
+
                     <Column field="name" header="Name" :sortable="true" headerStyle="width:14%; min-width:10rem;">
                         <template #body="slotProps">
                             <span class="p-column-title">Name</span>
@@ -193,19 +196,28 @@ const initFilters = () => {
                         </template>
                     </Column>
 
-                    <Column field="homeAddress" header="Home Address" :sortable="true" headerStyle="width:14%; min-width:10rem;">
+                    <Column field="address" header="Address" :sortable="true" headerStyle="width:30%; min-width:10rem;">
                         <template #body="slotProps">
-                            <span class="p-column-title">Home Address</span>
-                            {{ slotProps.data.homeAddress }}
+                            <span class="p-column-title">Address</span>
+                            {{ slotProps.data.address }}
                         </template>
                     </Column>
 
-                    <Column field="additionalAddressDetails" header="Additional Address Details" :sortable="true" headerStyle="width:30%; min-width:10rem;">
+                    <Column field="postalcode" header="Postal Code" :sortable="true" headerStyle="width:30%; min-width:10rem;">
                         <template #body="slotProps">
-                            <span class="p-column-title">Additional Address Details</span>
-                            {{ slotProps.data.additionalAddressDetails }}
+                            <span class="p-column-title">Postal Code</span>
+                            {{ slotProps.data.postalcode }}
                         </template>
                     </Column>
+
+
+                    <Column field="city" header="City" :sortable="true" headerStyle="width:30%; min-width:10rem;">
+                        <template #body="slotProps">
+                            <span class="p-column-title">City</span>
+                            {{ slotProps.data.city }}
+                        </template>
+                    </Column>
+
 
                     <Column field="createdAt" header="Created At" :sortable="true" headerStyle="width:14%; min-width:10rem;">
                         <template #body="slotProps">
@@ -257,13 +269,7 @@ const initFilters = () => {
                     </div>
                     
 
-                    <div class="field">
-                        <label for="homeAddress">Home Address</label>
-                        <Textarea id="homeAddress" v-model="physicalPerson.homeAddress" required="true" rows="3" cols="20" />
-                    </div>
-
-                
-
+                 
                     <div class="field">
                         <label for="additionalAddressDetails">Additional Address Details</label>
                         <Textarea id="additionalAddressDetails" v-model="physicalPerson.additionalAddressDetails" required="true" rows="3" cols="20" />
